@@ -25,7 +25,7 @@
 
     begin {
         $sequenceID = 0
-        $rtrEndpoint = "/real-time-response/entities/admin-command/v1/?cloud_request_id=$RequestID&sequence_id=$sequenceID"
+        $rtrEndpoint = "/real-time-response/entities/admin-command/v1/?cloud_request_id=$($RequestID)&sequence_id=$($sequenceID)"
 
     }
 
