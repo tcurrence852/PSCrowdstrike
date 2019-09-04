@@ -1,7 +1,7 @@
 ﻿function Start-CSRTRSession {
     <#
     .SYNOPSIS
-        Function to start a CrowdStrike Real Time Response Session via the "/real-time-response/entities/sessions/v1 and 
+        Function to start a CrowdStrike Real Time Response Session via the "/real-time-response/entities/sessions/v1 and
         /devices/queries/devices-scroll/v1 endpoints.
     .DESCRIPTION
         This function provides a way start a Real Time Response session using Crowdstrike.
@@ -34,7 +34,7 @@
         $AgentID = (Invoke-CSRestMethod -Endpoint $DeviceEndpoint -Method "GET").Resources
         $body = @{
             "device_id"   = "$($AgentID)"
-        } | ConvertTo-Json 
+        } | ConvertTo-Json
 
         $RTRSession = (Invoke-CSRestMethod -Endpoint $RTREndpoint -Method "POST" -Body $Body).Resources
 

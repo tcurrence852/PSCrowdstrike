@@ -37,7 +37,7 @@ function Invoke-CSRestMethod {
     Begin {
 
         $RestMethodParams = @{
-            URI         = "https://api.crowdstrike.com" + $Endpoint
+            URI         = "https://api.laggar.gcw.crowdstrike.com" + $Endpoint
             Method      = $Method
             Headers     = @{
                 "Accept"       = "application/json"

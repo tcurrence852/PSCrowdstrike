@@ -37,13 +37,13 @@ function Get-CSToken {
     process {
 
         $RestMethodParams = @{
-            URI     = "https://api.crowdstrike.com" + "/oauth2/token"
+            URI     = "https://api.laggar.gcw.crowdstrike.com" + "/oauth2/token"
             Method  = "POST"
             Headers = @{
                 "Accept"       = "application/json"
                 "Content-Type" = "application/x-www-form-urlencoded"
             }
-            Body    = "client_id=$clientID&client_secret=$clientSecret"
+            Body    = "client_id=$($clientID)&client_secret=$($clientSecret)"
         }
 
         $Token = Invoke-RestMethod @RestMethodParams
